@@ -149,10 +149,10 @@ process.on("SIGTERM", () => void core.logger.error("Received SIGTERM signal"))
 
 async function doTheThing() {
 	if (typeof core.config.platform === "undefined") {
-    core.config.platform = Platform.steam
+    core.config.platform = Platform.steam //pizda proverke
 }
 
-	const startedDate = DateTime.now()
+	const startedDate = DateTime.now() 
 
 	if (core.config.reportErrors) {
 		await core.logger.info("Initialising error reporting")
